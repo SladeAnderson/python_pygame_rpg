@@ -2,7 +2,10 @@
 
 ## planed features
 - [x] main screen opening
-- [ ] scene manager
+- [x] scene manager
 - [ ] title screen
 - [ ] scene map
 - [ ] title map
+
+ 	---
+

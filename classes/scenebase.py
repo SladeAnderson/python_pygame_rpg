@@ -18,8 +18,10 @@ class SceneBase:
         print(
             'god damn it. you didnt override this in the child class'
             )
-    
-    def SwitchToScene(self, next_scene):
+    def SwitchToSelf(self):
+        self.next = self
+        
+    def SwitchToNext(self, next_scene):
         self.next = next_scene
     
     def Terminate(self):

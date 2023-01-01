@@ -10,7 +10,6 @@ from classes.scenes.title_Scene import TitleScene
 
 
 
-
 # functions
 
 def run_game(width, height, frameps, starting_scene):
@@ -19,7 +18,7 @@ def run_game(width, height, frameps, starting_scene):
     clock = pygame.time.Clock()
     fps = FPS()
     active_scene = starting_scene
-
+    
 
     while active_scene != None:
         pressed_keys = pygame.key.get_pressed()
@@ -43,13 +42,12 @@ def run_game(width, height, frameps, starting_scene):
         active_scene.Update()
         active_scene.Render(screen)
 
-        active_scene = active_scene.next
+        active_scene.SwitchToNext(active_scene)
 
         fps.rend(screen)
 
         pygame.display.flip()
         fps.clock.tick(frameps)
 
-
-        
+  
 run_game(800, 600, 60, TitleScene())
